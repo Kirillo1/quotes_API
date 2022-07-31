@@ -10,13 +10,13 @@
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
           integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-    <title>Products View</title>
+    <title>Цитаты</title>
 </head>
 <body>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" id = "quotes_list">Quotes</a>
+            <a class="navbar-brand" id = "quotes_list">Цитаты</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                     aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -24,28 +24,27 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-{#                    <li class="nav-item">#}
-{#                        <a class="nav-link" id="add_quote_form">Add Quote</a>#}
-{#                    </li>#}
-{#                    {% if not user.is_authenticated %}#}
-{#                        <li class="nav-item">#}
-{#                            <a class="nav-link" href="{% url 'accounts:login' %}">Login</a>#}
-{#                        </li>#}
-{#                        <li class="nav-item">#}
-{#                            <a class="nav-link" href="{% url 'accounts:registration' %}">Register</a>#}
-{#                        </li>#}
-{#                    {% else %}#}
-{#                        <li class="nav-item">#}
-{#                            <a class="nav-link" href="{% url 'accounts:logout' %}">Logout</a>#}
-{#                        </li>#}
-{#                    {% endif %}#}
+                    <li class="nav-item">
+                        <a class="nav-link" id="add_quote_form">Добавить цитату</a>
+                    </li>
+                    {% if not user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'accounts:login' %}">Вход</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'accounts:registration' %}">Регистрация</a>
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'accounts:logout' %}">Выход</a>
+                        </li>
+                    {% endif %}
 
                 </ul>
             </div>
         </div>
     </nav>
 </header>
-
 
 {% block content %}
 
@@ -54,16 +53,16 @@
 <div class="container1" id="container1" hidden>
 
     <div class="inputs">
-        <label for="text">Text:</label>
+        <label for="text">Текст:</label>
         <input type="text" id="text" name="text"><br><br>
 
-        <label for="name">Name:</label>
+        <label for="name">Имя:</label>
         <input type="text" id="name" name="name"><br><br>
 
         <label for="email">Email:</label>
         <input type="text" id="email" name="email"><br><br>
 
-{#        <input type="submit" onclick="create_quote(event)" value="Create Quote" data-quote-url="{% url "quotes_api:article_list_create_view" %}"#}
+        <input type="submit" onclick="create_quote(event)" value="Сохранить" data-quote-url="{% url "quotes_api:quote_list_create_view" %}"
     </div>
 
 </div>
@@ -74,7 +73,7 @@
 {% endblock %}
 
 
-<script type="text/javascript" src="{% static 'js/index.js' %}">
+<script type="text/javascript" src="{% static 'index.js' %}">
 
 
 </script>
