@@ -1,0 +1,14 @@
+[
+{
+  "model": "quotes_api.quote",
+  "pk": 1,
+  "fields": {
+    "text": "nhnhnhnh",
+    "name": "hnhgnhgnhgn",
+    "email": "kiik@hyy.gttg",
+    "ranking": 2,
+    "status": "new",
+    "date_created": "2022-07-31T10:01:33.457Z"
+  }
+}
+]
